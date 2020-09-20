@@ -6,7 +6,7 @@
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 14:44:05 by jsalmi            #+#    #+#             */
-/*   Updated: 2019/11/06 13:42:04 by jsalmi           ###   ########.fr       */
+/*   Updated: 2020/09/20 13:23:37 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <sys/stat.h>
 # include <string.h>
+# include "get_next_line.h"
 
 typedef struct		s_list
 {
@@ -82,12 +83,20 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-size_t				ft_nbrlen(int nbr);
-char				*ft_reverse(char *s);
+int					ft_nbrlen(int nbr);
+void				ft_reverse(char *s);
 int					ft_isupper(char c);
 int					ft_islower(char c);
 int					ft_isspace(char c);
 char				*ft_strnchr(const char *str, int c, size_t n);
 int					ft_strchrlen(const char *str, int c);
+int					ft_atoi_base(const char *str, int str_base);
+size_t				ft_strspn(const char *s, const char *accept);
+int					ft_nstrstr(char *str1, char *str2);
+char				*ft_strndup(const char *s1, size_t len);
+char				*ft_ftoa(double d, int precision);
+int					ft_pow(int base, int exp);
+char				*ft_itoa_base(int nbr, int base);
+int					ft_stradd(char **dest, char *src);
 
 #endif

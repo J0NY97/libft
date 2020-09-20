@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_reverse.c                                       :+:      :+:    :+:   */
+/*   idk.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: nneronin <nneronin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/24 14:53:02 by jsalmi            #+#    #+#             */
-/*   Updated: 2020/09/20 12:58:49 by jsalmi           ###   ########.fr       */
+/*   Created: 2020/08/27 16:51:09 by nneronin          #+#    #+#             */
+/*   Updated: 2020/09/17 17:03:12 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
-void	ft_reverse(char *s)
+int		ft_nstrstr(char *str1, char *str2)
 {
-	int		i;
-	int		j;
-	char	temp;
+	int i;
+	int k;
 
-	j = 0;
-	i = ft_strlen(s) - 1;
-	while (j < i)
+	i = 0;
+	k = ft_strlen(str1) - ft_strlen(str2);
+	while (str1[k + i] != '\0')
 	{
-		temp = s[j];
-		s[j] = s[i];
-		s[i] = temp;
-		i--;
-		j++;
+		if (str1[k + i] != str2[i])
+			return (-1);
+		i++;
 	}
+	return (0);
 }

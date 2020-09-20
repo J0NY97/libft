@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_stradd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 11:00:35 by jsalmi            #+#    #+#             */
-/*   Updated: 2020/07/13 11:00:39 by jsalmi           ###   ########.fr       */
+/*   Created: 2020/09/20 13:16:07 by jsalmi            #+#    #+#             */
+/*   Updated: 2020/09/20 13:26:38 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int		ft_stradd(char **dest, char *src)
 {
-	unsigned char *str1;
-	unsigned char *str2;
+	char	*temp;
 
-	str1 = (unsigned char *)dest;
-	str2 = (unsigned char *)src;
-	if (!n || dest == src)
-		return (dest);
-	while (n--)
-		*str1++ = *str2++;
-	return (dest);
+	if (!src)
+		return (0);
+	if (!(*dest))
+	{
+		*dest = ft_strdup(src);
+		return (1);
+	}
+	temp = ft_strdup(*dest);
+	ft_strdel(dest);
+	*dest = ft_strjoin(temp, src);
+	ft_strdel(&temp);
+	return (1);
 }

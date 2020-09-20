@@ -6,7 +6,7 @@
 #    By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/17 15:28:58 by jsalmi            #+#    #+#              #
-#    Updated: 2019/11/06 13:42:17 by jsalmi           ###   ########.fr        #
+#    Updated: 2020/09/20 13:20:26 by jsalmi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,16 @@ SRCS = ft_memset.c\
 	   ft_islower.c\
 	   ft_isspace.c\
 	   ft_strnchr.c\
-	   ft_strchrlen.c
+	   ft_strchrlen.c\
+	   ft_atoi_base.c\
+	   get_next_line.c\
+	   ft_strspn.c\
+	   ft_nstrstr.c\
+	   ft_strndup.c\
+	   ft_ftoa.c\
+	   ft_itoa_base.c\
+	   ft_stradd.c\
+	   ft_pow.c
 OBJS = $(SRCS:.c=.o)
 LIBS = libft.h
 FLAGS = -Wall -Wextra -Werror
@@ -83,15 +92,18 @@ FLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME):
-	gcc -c $(SRCS) $(FLAGS)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	@gcc -c $(SRCS) $(FLAGS)
+	@ar rc $(NAME) $(OBJS)
+	@ranlib $(NAME)
+	@/bin/rm -f $(OBJS)
+	@echo "libft was successfully created."
 
 clean:
-	/bin/rm -f $(OBJS)
+	@/bin/rm -f $(OBJS)
+	@echo "$(NAME) was cleaned."
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	@/bin/rm -f $(NAME)
 
 re: fclean all
 

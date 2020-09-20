@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_pow.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 11:00:35 by jsalmi            #+#    #+#             */
-/*   Updated: 2020/07/13 11:00:39 by jsalmi           ###   ########.fr       */
+/*   Created: 2020/09/19 15:48:50 by jsalmi            #+#    #+#             */
+/*   Updated: 2020/09/19 15:57:56 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_pow(int base, int exp)
 {
-	unsigned char *str1;
-	unsigned char *str2;
+	int result;
 
-	str1 = (unsigned char *)dest;
-	str2 = (unsigned char *)src;
-	if (!n || dest == src)
-		return (dest);
-	while (n--)
-		*str1++ = *str2++;
-	return (dest);
+	result = 1;
+	while (exp > 0)
+	{
+		result = result * base;
+		exp--;
+	}
+	return (result);
 }

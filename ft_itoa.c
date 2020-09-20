@@ -37,6 +37,6 @@ char	*ft_itoa(int n)
 	neg == -1 ? str[i] = '-' : 0;
 	i += neg == -1 ? 1 : 0;
 	str[i] = '\0';
-	str = ft_reverse(str);
+	ft_reverse(str);
 	return (str);
 }

@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_reverse.c                                       :+:      :+:    :+:   */
+/*   get_nexxt_line.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: nneronin <nneronin@stuent.hive.fi>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/24 14:53:02 by jsalmi            #+#    #+#             */
-/*   Updated: 2020/09/20 12:58:49 by jsalmi           ###   ########.fr       */
+/*   Created: 2019/10/24 14:38:24 by nneronin          #+#    #+#             */
+/*   Updated: 2020/02/21 14:01:46 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-void	ft_reverse(char *s)
-{
-	int		i;
-	int		j;
-	char	temp;
+# define BUFF_SIZE 1
+# include <stdlib.h>
+# include <unistd.h>
+# include "./libft.h"
 
-	j = 0;
-	i = ft_strlen(s) - 1;
-	while (j < i)
-	{
-		temp = s[j];
-		s[j] = s[i];
-		s[i] = temp;
-		i--;
-		j++;
-	}
-}
+int get_next_line(const int fd, char **line);
+
+#endif
