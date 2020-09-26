@@ -6,7 +6,7 @@
 #    By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/17 15:28:58 by jsalmi            #+#    #+#              #
-#    Updated: 2020/09/24 12:27:43 by jsalmi           ###   ########.fr        #
+#    Updated: 2020/09/26 11:52:24 by jsalmi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,6 +86,7 @@ SRCS = ft_memset.c\
 	   ft_stradd.c\
 	   ft_strreplace.c\
 	   ft_straddchar.c\
+	   ft_strjoiner.c\
 	   ft_pow.c
 OBJS = $(SRCS:.c=.o)
 LIBS = libft.h
