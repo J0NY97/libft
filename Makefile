@@ -94,7 +94,7 @@ FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(SRCS)
 	@gcc -c $(SRCS) $(FLAGS)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
