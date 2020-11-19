@@ -6,7 +6,7 @@
 #    By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/17 15:28:58 by jsalmi            #+#    #+#              #
-#    Updated: 2020/09/26 11:52:24 by jsalmi           ###   ########.fr        #
+#    Updated: 2020/10/01 12:02:09 by jsalmi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -100,7 +100,7 @@ $(NAME): $(SRCS)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
 	@/bin/rm -f $(OBJS)
-	@echo "libft was successfully created."
+	@echo "$(NAME) was successfully created."
 
 clean:
 	@/bin/rm -f $(OBJS)
