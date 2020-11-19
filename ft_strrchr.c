@@ -19,10 +19,13 @@ char	*ft_strrchr(const char *str, int c)
 
 	strstr = (char *)str;
 	i = ft_strlen(strstr);
+	//i = ft_strlen(str);
 	while (i >= 0)
 	{
 		if (strstr[i] == (char)c)
 			return (&strstr[i]);
+		// if (str[i] == (char)c)
+		// 	return ((char *)&str[i]);
 		i--;
 	}
 	return (0);

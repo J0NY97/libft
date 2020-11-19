@@ -87,7 +87,8 @@ SRCS = ft_memset.c\
 	   ft_strreplace.c\
 	   ft_straddchar.c\
 	   ft_strjoiner.c\
-	   ft_pow.c
+	   ft_pow.c \
+	   ft_atof.c
 OBJS = $(SRCS:.c=.o)
 LIBS = libft.h
 FLAGS = -Wall -Wextra -Werror

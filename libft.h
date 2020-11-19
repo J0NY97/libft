@@ -101,5 +101,6 @@ int					ft_stradd(char **dest, char *src);
 int					ft_strreplace(char **dest, char **src);
 void				ft_straddchar(char **str, char c);
 char				*ft_strjoiner(char *first, ...);
+double				ft_atof(const char *str);
 
 #endif
