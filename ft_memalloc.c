@@ -18,6 +18,6 @@ void	*ft_memalloc(size_t size)
 
 	if (!(this = (void *)malloc(size)))
 		return (0);
-	ft_bzero(this, size);
+	ft_memset(this, 0, size);
 	return (this);
 }
