@@ -17,7 +17,7 @@ double	ft_atof(const char *str)
 	double	res;
 	double	res2;
 	char	*c;
-	int		len;
+	int	len;
 
 	c = (char *)str;
 	res = (double)ft_atoi(c);
@@ -29,6 +29,6 @@ double	ft_atof(const char *str)
 	len = ft_strlen(c);
 	while (len--)
 		res2 /= 10;
-	return (res + ((res > 0) ? res2 : -res2));
+	return (res + ((res2 > 0 && str[0] != '-') ? res2 : -res2));
 }
 
