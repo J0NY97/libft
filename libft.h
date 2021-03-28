@@ -102,5 +102,6 @@ void				ft_straddchar(char **str, char c);
 char				*ft_strjoiner(char *first, ...);
 double				ft_atof(const char *str);
 void				add_to_list(t_list **list, void *new_v, size_t size);
+int				ft_strendswith(char const *src, char const *comp);
 
 #endif

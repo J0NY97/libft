@@ -89,9 +89,9 @@ SRCS = ft_memset.c\
 	   ft_strjoiner.c\
 	   ft_pow.c \
 	   ft_atof.c \
+	   ft_strendswith.c \
 	   add_to_list.c
 OBJS = $(SRCS:.c=.o)
-LIBS = libft.h
 FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
@@ -100,7 +100,6 @@ $(NAME): $(SRCS)
 	@gcc -c $(SRCS) $(FLAGS)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
-	@rm -f $(OBJS)
 	@echo "$(NAME) was successfully created."
 
 clean:
