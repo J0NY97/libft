@@ -90,6 +90,7 @@ SRCS = ft_memset.c\
 	   ft_pow.c \
 	   ft_atof.c \
 	   ft_strendswith.c \
+	   ft_strremove.c \
 	   add_to_list.c
 OBJS = $(SRCS:.c=.o)
 FLAGS = -Wall -Wextra -Werror
