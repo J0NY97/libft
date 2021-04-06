@@ -21,6 +21,6 @@ int	ft_strendswith(char const *src, char const *comp)
 	comp_len = ft_strlen(comp);
 	if (src_len < comp_len)
 		return (1);
-	ft_putstr(src + src_len - comp_len);
+	//ft_putstr(src + src_len - comp_len);
 	return (ft_strcmp(src + src_len - comp_len, comp));
 }

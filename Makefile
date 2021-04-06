@@ -101,6 +101,7 @@ $(NAME): $(SRCS)
 	@gcc -c $(SRCS) $(FLAGS)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
+	@rm -f $(OBJS)
 	@echo "$(NAME) was successfully created."
 
 clean:
