@@ -1,1 +1,9 @@
+*.o
 *.a
+lib/
+*.swp
+include/
+.DS_Store
+map_editor/maps/*
+.vscode
+SDL2
