@@ -6,13 +6,13 @@
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/23 16:40:14 by jsalmi            #+#    #+#             */
-/*   Updated: 2020/09/23 16:48:54 by jsalmi           ###   ########.fr       */
+/*   Updated: 2021/07/03 08:39:18 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strreplace(char **dest, char **src)
+int	ft_strreplace(char **dest, char **src)
 {
 	if (!src || *src == NULL)
 		return (0);

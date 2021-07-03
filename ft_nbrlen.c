@@ -6,20 +6,20 @@
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 14:53:50 by jsalmi            #+#    #+#             */
-/*   Updated: 2019/10/24 14:54:38 by jsalmi           ###   ########.fr       */
+/*   Updated: 2021/07/03 09:41:29 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-int		ft_nbrlen(int nbr)
+int	ft_nbrlen(int nbr)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (nbr == 0)
 		return (1);
-	if (nbr < len)
+	if (nbr < 0)
 		len++;
 	while (nbr != 0)
 	{

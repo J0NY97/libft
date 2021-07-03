@@ -6,7 +6,7 @@
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/20 11:11:13 by jsalmi            #+#    #+#             */
-/*   Updated: 2020/09/23 15:37:18 by jsalmi           ###   ########.fr       */
+/*   Updated: 2021/07/03 09:51:00 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	val(int c)
 		return ('A' - 10 + c);
 }
 
-int		ft_nbrlen_base(long long int nbr, int base)
+int	ft_nbrlen_base(long long int nbr, int base)
 {
 	int	len;
 
@@ -43,10 +43,11 @@ char	*ft_itoa_base(long long int nbr, int base)
 	int		len;
 	int		neg;
 
-	neg = nbr < 0 ? -1 : 1;
-	nbr *= neg;
+	neg = 1;
+	if (nbr < 0)
+		neg = -1;
 	len = ft_nbrlen_base(nbr, base);
-	len += neg == -1 ? 1 : 0;
+	nbr *= neg;
 	str = ft_strnew(len);
 	if (neg == -1)
 		str[0] = '-';

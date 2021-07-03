@@ -6,7 +6,7 @@
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 15:31:50 by jsalmi            #+#    #+#             */
-/*   Updated: 2020/07/23 17:42:17 by jsalmi           ###   ########.fr       */
+/*   Updated: 2021/07/03 08:59:23 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ double	ft_atof(const char *str)
 	double	res;
 	double	res2;
 	char	*c;
-	int	len;
+	int		len;
 
 	c = (char *)str;
 	res = (double)ft_atoi(c);

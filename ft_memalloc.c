@@ -6,7 +6,7 @@
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 10:06:57 by jsalmi            #+#    #+#             */
-/*   Updated: 2020/09/24 13:27:28 by jsalmi           ###   ########.fr       */
+/*   Updated: 2021/07/03 09:05:08 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,14 @@
 
 void	*ft_memalloc(size_t size)
 {
-	char *this;
+	char	*this;
 
-	if (!(this = (void *)malloc(size)))
-		return (0);
+	this = malloc(size);
+	if (!this)
+	{
+		ft_putstr("Malloc broken!\n");
+		exit(0);
+	}
 	ft_memset(this, 0, size);
 	return (this);
 }

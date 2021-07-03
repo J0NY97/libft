@@ -6,7 +6,7 @@
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 15:31:50 by jsalmi            #+#    #+#             */
-/*   Updated: 2020/07/23 17:42:17 by jsalmi           ###   ########.fr       */
+/*   Updated: 2021/07/03 08:59:08 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	add_to_list(t_list **list, void *new_v, size_t size)
 {
-	t_list *lst;
+	t_list	*lst;
 
 	lst = ft_lstnew(0, 0);
 	lst->content = new_v;

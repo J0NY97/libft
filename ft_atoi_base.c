@@ -6,23 +6,23 @@
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/18 13:36:09 by jsalmi            #+#    #+#             */
-/*   Updated: 2020/02/05 16:22:15 by jsalmi           ###   ########.fr       */
+/*   Updated: 2021/07/03 10:00:21 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		is_valid(char c)
+int	is_valid(char c)
 {
-	if ((c >= '0' && c <= '9') ||
-		(ft_tolower(c) >= 'a' && ft_tolower(c) <= 'f'))
+	if ((c >= '0' && c <= '9')
+		|| (ft_tolower(c) >= 'a' && ft_tolower(c) <= 'f'))
 	{
 		return (1);
 	}
 	return (0);
 }
 
-int		value_of(char c)
+int	value_of(char c)
 {
 	if (c >= '0' && c <= '9')
 		return (c - '0');
@@ -33,16 +33,19 @@ int		value_of(char c)
 	return (0);
 }
 
-int		ft_atoi_base(const char *str, int str_base)
+int	ft_atoi_base(const char *str, int str_base)
 {
-	int result;
-	int sign;
+	int	result;
+	int	sign;
 
 	result = 0;
 	while (*str <= 32)
 		str++;
-	sign = (*str == '-') ? -1 : 1;
-	(*str == '-' || *str == '+') ? ++str : 0;
+	sign = 1;
+	if (*str == '-')
+		sign = -1;
+	if (*str == '-' || *str == '+')
+		++str;
 	while (is_valid(*str))
 		result = result * str_base + value_of(*str++);
 	return (result * sign);

@@ -6,7 +6,7 @@
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 11:18:10 by jsalmi            #+#    #+#             */
-/*   Updated: 2019/10/26 15:14:21 by jsalmi           ###   ########.fr       */
+/*   Updated: 2021/07/03 09:46:05 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {
-	char *asdf;
+	char	*asdf;
 
 	asdf = (char *)str;
 	while (0 != n)

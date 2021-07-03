@@ -6,7 +6,7 @@
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 15:47:24 by jsalmi            #+#    #+#             */
-/*   Updated: 2020/09/17 16:21:35 by jsalmi           ###   ########.fr       */
+/*   Updated: 2021/07/03 08:54:19 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ char	*ft_strndup(const char *s1, size_t len)
 	char	*sdest;
 
 	counter = 0;
-	if (!(sdest = (char *)ft_memalloc(sizeof(char) * (len + 1))))
-		return (NULL);
+	sdest = ft_memalloc(sizeof(char) * (len + 1));
 	while (s1[counter] != '\0' && counter < len)
 	{
 		sdest[counter] = s1[counter];

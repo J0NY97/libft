@@ -6,7 +6,7 @@
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 15:50:42 by jsalmi            #+#    #+#             */
-/*   Updated: 2019/10/18 12:56:01 by jsalmi           ###   ########.fr       */
+/*   Updated: 2021/07/03 08:49:51 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,28 @@
 
 char	*ft_strremove(char *str, const char *sub)
 {
-	char *p;
-	char *q;
-	char *r;
-	size_t len;
+	char	*p;
+	char	*q;
+	char	*r;
+	size_t	len;
 
-	if ((q = r = ft_strstr(str, sub)) != NULL)
+	r = ft_strstr(str, sub);
+	q = r;
+	if (r != NULL)
 	{
 		len = ft_strlen(sub);
-		while ((r = ft_strstr(p = r + len, sub)) != NULL)
+		p = r + len;
+		r = ft_strstr(p, sub);
+		while (r != NULL)
 		{
+			p = r + len;
+			r = ft_strstr(p, sub);
 			while (p < r)
 				*q++ = *p++;
 		}
-		while ((*q++ = *p++) != '\0')
-			continue ;
+		*q++ = *p++;
+		while (*q != '\0')
+			*q++ = *p++;
 	}
 	return (str);
 }

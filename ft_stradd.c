@@ -6,13 +6,13 @@
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/20 13:16:07 by jsalmi            #+#    #+#             */
-/*   Updated: 2020/09/24 11:47:57 by jsalmi           ###   ########.fr       */
+/*   Updated: 2021/07/03 09:00:31 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_stradd(char **dest, char *src)
+int	ft_stradd(char **dest, char *src)
 {
 	char	*temp;
 

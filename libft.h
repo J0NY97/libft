@@ -6,7 +6,7 @@
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 14:44:05 by jsalmi            #+#    #+#             */
-/*   Updated: 2021/04/27 11:14:05 by jsalmi           ###   ########.fr       */
+/*   Updated: 2021/07/03 09:03:09 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,5 +105,8 @@ double				ft_atof(const char *str);
 void				add_to_list(t_list **list, void *new_v, size_t size);
 int				ft_strendswith(char const *src, char const *comp);
 char				*ft_strremove(char *str, const char *sub);
+int					ft_clamp(int value, int min, int max);
+int					ft_min(int a, int b);
+int					ft_max(int a, int b);
 
 #endif

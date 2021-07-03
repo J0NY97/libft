@@ -6,7 +6,7 @@
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 10:56:00 by jsalmi            #+#    #+#             */
-/*   Updated: 2019/10/29 13:46:32 by jsalmi           ###   ########.fr       */
+/*   Updated: 2021/07/03 09:47:37 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list *newlst;
-	t_list *holder;
+	t_list	*newlst;
+	t_list	*holder;
 
-	if (!(holder = (t_list *)malloc(sizeof(t_list))))
-		return (0);
-	if (!(newlst = (t_list *)malloc(sizeof(t_list))))
-		return (0);
+	holder = (t_list *)ft_memalloc(sizeof(t_list));
+	newlst = (t_list *)ft_memalloc(sizeof(t_list));
 	newlst = f(lst);
 	holder = newlst;
 	lst = lst->next;

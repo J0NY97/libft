@@ -6,7 +6,7 @@
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/19 15:48:50 by jsalmi            #+#    #+#             */
-/*   Updated: 2020/09/19 15:57:56 by jsalmi           ###   ########.fr       */
+/*   Updated: 2021/07/03 09:00:43 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_pow(int base, int exp)
 {
-	int result;
+	int	result;
 
 	result = 1;
 	while (exp > 0)

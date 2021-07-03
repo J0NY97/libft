@@ -6,7 +6,7 @@
 #    By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/17 15:28:58 by jsalmi            #+#    #+#              #
-#    Updated: 2021/05/07 13:49:30 by jsalmi           ###   ########.fr        #
+#    Updated: 2021/07/03 09:03:35 by jsalmi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,6 +91,8 @@ SRCS = ft_memset.c\
 	   ft_atof.c \
 	   ft_strendswith.c \
 	   ft_strremove.c \
+	   ft_clamp.c \
+	   ft_min_max.c \
 	   add_to_list.c
 OBJS = $(SRCS:.c=.o)
 FLAGS = -Wall -Wextra -Werror

@@ -6,7 +6,7 @@
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 12:40:54 by jsalmi            #+#    #+#             */
-/*   Updated: 2019/10/26 15:08:25 by jsalmi           ###   ########.fr       */
+/*   Updated: 2021/07/03 08:24:30 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,7 @@ char	*ft_strtrim(char const *s)
 		y--;
 		x--;
 	}
-	if (!(asd = ft_strnew(y)))
-		return (0);
+	asd = ft_strnew(y);
 	ft_strncpy(asd, (s + temp), y);
 	return (asd);
 }

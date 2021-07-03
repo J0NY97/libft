@@ -6,16 +6,16 @@
 /*   By: nneronin <nneronin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/27 16:51:09 by nneronin          #+#    #+#             */
-/*   Updated: 2020/09/17 17:03:12 by jsalmi           ###   ########.fr       */
+/*   Updated: 2021/07/03 09:04:27 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_nstrstr(char *str1, char *str2)
+int	ft_nstrstr(char *str1, char *str2)
 {
-	int i;
-	int k;
+	int	i;
+	int	k;
 
 	i = 0;
 	k = ft_strlen(str1) - ft_strlen(str2);
