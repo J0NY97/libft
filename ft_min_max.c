@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_min_max.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/16 15:31:50 by jsalmi            #+#    #+#             */
-/*   Updated: 2021/07/07 08:42:31 by jsalmi           ###   ########.fr       */
+/*   Created: 2021/07/03 09:01:47 by jsalmi            #+#    #+#             */
+/*   Updated: 2021/07/03 09:03:21 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
-double	ft_atof(const char *str)
+int	ft_min(int a, int b)
 {
-	double	res;
-	double	res2;
-	char	*c;
-	int		len;
+	if (a < b)
+		return (a);
+	return (b);
+}
 
-	c = (char *)str;
-	res = (double)ft_atoi(c);
-	while (*c && *c != '.')
-		c++;
-	if (*c == '.')
-		c++;
-	res2 = (double)ft_atoi(c);
-	len = ft_strlen(c);
-	while (len--)
-		res2 /= 10;
-	if (str[0] == '-')
-		res2 = -res2;
-	return (res + res2);
+int	ft_max(int a, int b)
+{
+	if (a > b)
+		return (a);
+	return (b);
 }

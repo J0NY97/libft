@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_clamp.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/16 15:31:50 by jsalmi            #+#    #+#             */
-/*   Updated: 2021/07/07 08:42:31 by jsalmi           ###   ########.fr       */
+/*   Created: 2021/07/03 09:00:49 by jsalmi            #+#    #+#             */
+/*   Updated: 2021/07/03 09:01:33 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
-double	ft_atof(const char *str)
+int	ft_clamp(int value, int min, int max)
 {
-	double	res;
-	double	res2;
-	char	*c;
-	int		len;
-
-	c = (char *)str;
-	res = (double)ft_atoi(c);
-	while (*c && *c != '.')
-		c++;
-	if (*c == '.')
-		c++;
-	res2 = (double)ft_atoi(c);
-	len = ft_strlen(c);
-	while (len--)
-		res2 /= 10;
-	if (str[0] == '-')
-		res2 = -res2;
-	return (res + res2);
+	if (value < min)
+		return (min);
+	else if (value > max)
+		return (max);
+	return (value);
 }
