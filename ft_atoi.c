@@ -12,6 +12,7 @@
 
 #include "./libft.h"
 
+// use atoi_base?
 int	ft_atoi(const char *str)
 {
 	int	fin;
