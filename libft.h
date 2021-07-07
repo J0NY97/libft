@@ -6,7 +6,7 @@
 /*   By: jsalmi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 14:44:05 by jsalmi            #+#    #+#             */
-/*   Updated: 2021/07/03 09:03:09 by jsalmi           ###   ########.fr       */
+/*   Updated: 2021/07/07 08:45:06 by jsalmi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <string.h>
 # include "get_next_line.h"
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	size_t			content_size;
@@ -104,7 +104,7 @@ void				ft_straddchar(char **str, char c);
 char				*ft_strjoiner(char *first, ...);
 double				ft_atof(const char *str);
 void				add_to_list(t_list **list, void *new_v, size_t size);
-int				ft_strendswith(char const *src, char const *comp);
+int					ft_strendswith(char const *src, char const *comp);
 char				*ft_strremove(char *str, const char *sub);
 int					ft_clamp(int value, int min, int max);
 int					ft_min(int a, int b);

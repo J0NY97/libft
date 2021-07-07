@@ -8,3 +8,4 @@ map_editor/maps/*
 .vscode
 SDL2
 *.lib
+a.out
