@@ -107,6 +107,7 @@ void				add_to_list(t_list **list, void *new_v, size_t size);
 int					ft_strendswith(char const *src, char const *comp);
 char				*ft_strremove(char *str, const char *sub);
 int					ft_clamp(int value, int min, int max);
+float					ft_fclamp(float value, float min, float max);
 int					ft_min(int a, int b);
 int					ft_max(int a, int b);
 float					ft_fmin(float a, float b);
