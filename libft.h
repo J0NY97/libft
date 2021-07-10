@@ -109,5 +109,7 @@ char				*ft_strremove(char *str, const char *sub);
 int					ft_clamp(int value, int min, int max);
 int					ft_min(int a, int b);
 int					ft_max(int a, int b);
+float					ft_fmin(float a, float b);
+float					ft_fmax(float a, float b);
 
 #endif
