@@ -17,26 +17,24 @@ char	*ft_itoa(int n)
 	int		nbrcount;
 	int		i;
 	char	*str;
-	int		neg;
 
 	i = 0;
 	nbrcount = ft_nbrlen(n);
-	str = ft_memalloc(sizeof(char) * (nbrcount + 1));
+	str = ft_strnew(nbrcount);
 	if (n == -2147483648)
 		return (ft_strcpy(str, "-2147483648"));
-	neg = 1;
 	if (n < 0)
-		neg = -1;
-	n *= neg;
+	{
+		n *= -1;
+		str[nbrcount - 1] = '-';
+		nbrcount--;
+	}
 	while (nbrcount > 0)
 	{
 		str[i++] = (n % 10) + '0';
 		n = n / 10;
 		nbrcount--;
 	}
-	if (neg == -1)
-		str[i++] = '-';
-	str[i] = '\0';
 	ft_reverse(str);
 	return (str);
 }
