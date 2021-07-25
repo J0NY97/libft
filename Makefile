@@ -94,6 +94,7 @@ SRCS = ft_memset.c\
 	   ft_clamp.c \
 	   ft_min_max.c \
 	   ft_strtoupper.c \
+	   ft_lstlen.c \
 	   add_to_list.c
 OBJS = $(SRCS:.c=.o)
 FLAGS = -Wall -Wextra -Werror
