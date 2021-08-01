@@ -114,5 +114,6 @@ float					ft_fmin(float a, float b);
 float					ft_fmax(float a, float b);
 char				*ft_strtoupper(const char *src);
 int					ft_lstlen(t_list *lst);
+void				ft_arraydel(char **arr);
 
 #endif
